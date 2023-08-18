@@ -1,0 +1,23 @@
+---
+import Contact from "../component/Contact";
+import HeaderPage from "../component/header";
+import FooterPage from "../component/FooterPage";
+---
+
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/dc.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Darren Christoper</title>
+</head>
+
+<body>
+<HeaderPage client:load />
+<div class="animate-fade animate-once animate-duration-[1000ms] animate-ease-out animate-fill-forwards">
+<Contact client:load/>
+</div>
+<FooterPage client:load/>
+
+</body>

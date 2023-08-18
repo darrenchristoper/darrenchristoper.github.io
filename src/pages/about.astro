@@ -1,0 +1,32 @@
+---
+
+import HeaderPage from "../component/header";
+import FooterPage from "../component/FooterPage";---
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/dc.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Darren Christoper</title>
+</head>
+<body >
+<HeaderPage client:load />
+<div class="animate-fade animate-once animate-duration-[1000ms] animate-ease-out animate-fill-forwards">
+<section class="bg-gray-100 dark:bg-gray-900 scale-75 shadow-2xl" style="border-radius: 2rem">
+    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">About Me</h2>
+            <p class="mb-4">Welcome to my profile! My name is Darren Christoper. I’m currently taking Master's in Computer Science. In the past enjoying being a Laravel developer, but I'm still Interested in learning other frameworks or programming languages ! I would like to use my skills to create positive solutions to complex problems.
+
+                Outside of work, I love to read books about technology, finance & business. I am currently seeking Internship positions in the Computer Science arena. Please feel free to connect with me ! I would love to learn more
+                about you.
+        </div>
+        <div class="grid grid-cols-2 gap-4 mt-8">
+            <img class="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1">
+            <img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2">
+        </div>
+    </div>
+</section>
+</div>
+<FooterPage client:load/>
+</body>
