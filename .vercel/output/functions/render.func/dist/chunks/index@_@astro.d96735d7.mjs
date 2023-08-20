@@ -10,6 +10,6 @@ import 'string-width';
 import 'react';
 import 'react-dom/server';
 
-const page = () => import('./pages/about.astro.ae34738e.mjs').then(n => n.a);
+const page = () => import('./pages/index.astro.6b678436.mjs');
 
 export { page };

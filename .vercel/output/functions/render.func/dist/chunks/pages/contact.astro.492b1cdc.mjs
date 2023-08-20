@@ -3,7 +3,7 @@ import 'html-escaper';
 import { Card } from 'flowbite-react';
 import 'react';
 import { jsxs, Fragment, jsx } from 'react/jsx-runtime';
-import { H as HeaderPage, F as FooterPage } from './about.astro.ae34738e.mjs';
+import { H as HeaderPage, F as FooterPage } from './about.astro.39b43035.mjs';
 import 'cookie';
 import 'kleur/colors';
 import 'path-to-regexp';
