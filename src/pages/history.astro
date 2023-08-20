@@ -1,0 +1,19 @@
+---
+import LineHistory from "../component/LineHistory";
+import HeaderPage from "../component/header";
+import FooterPage from "../component/FooterPage";
+---
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/dc.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Darren Christoper</title>
+</head>
+
+<body>
+<HeaderPage/>
+<LineHistory client:load/>
+<FooterPage/>
+</body>
+
