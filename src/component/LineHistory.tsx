@@ -67,6 +67,7 @@ const TimeComponentref = ({ time , title, body , href}: SampleComponentPropsWith
 export default function DefaultTimeline() {
     return (
         <>
+
             <br/>
         <div className="flex justify-center">
         <Card >
@@ -88,7 +89,7 @@ export default function DefaultTimeline() {
                 <TimeComponentref time={'July 2022- 2023'} title={'PT Hoki Distribution Niaga'} body={'Working as Programmer in Website and Mobile application'} href={'https://www.linkedin.com/company/pt-hoki-distribusi-niaga/'}/>
             </AnimateOnScroll>
             <AnimateOnScroll reappear>
-                <TimeComponent time={'Aug 2023'} title={'Illinois Tech'} body={'Admitted on the University as Master in Computer Science'}/>
+                <TimeComponentref time={'Aug 2023'} title={'Illinois Institute of Technology'} body={'Admitted on the University as Master in Computer Science'} href={'https://www.iit.edu/'}/>
             </AnimateOnScroll>
         </Timeline>
         </Card>

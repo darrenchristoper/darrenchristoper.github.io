@@ -2,6 +2,8 @@
 import LineHistory from "../component/LineHistory";
 import HeaderPage from "../component/header";
 import FooterPage from "../component/FooterPage";
+import Jumbotron from "../astropage/jumbotronhistory.astro";
+
 ---
 <head>
     <meta charset="utf-8" />
@@ -13,6 +15,7 @@ import FooterPage from "../component/FooterPage";
 
 <body>
 <HeaderPage/>
+<Jumbotron/>
 <LineHistory client:load/>
 <FooterPage/>
 </body>

@@ -2,7 +2,7 @@
 
 import { Card } from 'flowbite-react';
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 export default function Contact() {
     return (
