@@ -2,6 +2,7 @@
 import Contact from "../component/Contact";
 import HeaderPage from "../component/header";
 import FooterPage from "../component/FooterPage";
+import Jumbotron from "../astropage/jumbotroncontact.astro";
 ---
 
 
@@ -15,6 +16,7 @@ import FooterPage from "../component/FooterPage";
 
 <body>
 <HeaderPage client:load />
+<Jumbotron/>
 <div class="animate-fade animate-once animate-duration-[1000ms] animate-ease-out animate-fill-forwards">
 <Contact client:load/>
 </div>
