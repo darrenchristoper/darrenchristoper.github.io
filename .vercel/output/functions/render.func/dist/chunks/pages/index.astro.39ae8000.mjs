@@ -1,6 +1,6 @@
 /* empty css                           */import { _ as __astro_tag_component__, c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderHead, e as renderComponent } from '../astro.02587cb0.mjs';
 import 'html-escaper';
-import { H as HeaderPage, F as FooterPage } from './about.astro.40444f18.mjs';
+import { H as HeaderPage, F as FooterPage } from './about.astro.395a6f86.mjs';
 import 'react';
 import { Card } from 'flowbite-react';
 import { jsxs, jsx } from 'react/jsx-runtime';
@@ -9,6 +9,7 @@ import 'kleur/colors';
 import 'path-to-regexp';
 import 'mime';
 import 'string-width';
+import 'react-dom';
 
 function CardPage() {
   return /* @__PURE__ */ jsxs("div", {

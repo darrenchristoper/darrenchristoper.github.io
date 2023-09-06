@@ -3,12 +3,13 @@ import 'html-escaper';
 import { Card, Timeline, Button } from 'flowbite-react';
 import { useRef, useState, useEffect } from 'react';
 import { jsx, Fragment, jsxs } from 'react/jsx-runtime';
-import { H as HeaderPage, F as FooterPage } from './about.astro.40444f18.mjs';
+import { H as HeaderPage, F as FooterPage } from './about.astro.395a6f86.mjs';
 import 'cookie';
 import 'kleur/colors';
 import 'path-to-regexp';
 import 'mime';
 import 'string-width';
+import 'react-dom';
 
 const useElementOnScreen = (options) => {
   const containerRef = useRef(null);
@@ -167,10 +168,7 @@ const $$Astro$1 = createAstro("https://darrenchristoper.github.io");
 const $$Jumbotronhistory = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Jumbotronhistory;
-  return renderTemplate`---
-
----
-${maybeRenderHead()}<section class="bg-white dark:bg-gray-900">
+  return renderTemplate`${maybeRenderHead()}<section class="bg-white dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">My Journey</h1>
         <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Embark on a captivating journey through time with me. Explore a dynamic timeline that traces the evolution of milestones, experiences, and accomplishments that have shaped my path. From humble beginnings to significant achievements, join me as I share my unique story.</p>

@@ -3,12 +3,13 @@ import 'html-escaper';
 import { Card } from 'flowbite-react';
 import 'react';
 import { jsxs, Fragment, jsx } from 'react/jsx-runtime';
-import { H as HeaderPage, F as FooterPage } from './about.astro.40444f18.mjs';
+import { H as HeaderPage, F as FooterPage } from './about.astro.395a6f86.mjs';
 import 'cookie';
 import 'kleur/colors';
 import 'path-to-regexp';
 import 'mime';
 import 'string-width';
+import 'react-dom';
 
 function Contact() {
   return /* @__PURE__ */ jsxs(Fragment, {

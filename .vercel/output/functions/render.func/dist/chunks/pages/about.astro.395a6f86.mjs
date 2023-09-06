@@ -1,27 +1,47 @@
-/* empty css                           */import { _ as __astro_tag_component__, c as createAstro, a as createComponent, r as renderTemplate, b as addAttribute, d as renderHead, e as renderComponent } from '../astro.02587cb0.mjs';
+/* empty css                           */import 'react-dom';
+import { _ as __astro_tag_component__, c as createAstro, a as createComponent, r as renderTemplate, b as addAttribute, d as renderHead, e as renderComponent } from '../astro.02587cb0.mjs';
 import 'html-escaper';
+import { Navbar, Footer } from 'flowbite-react';
 import 'react';
 import { jsx, jsxs, Fragment } from 'react/jsx-runtime';
-import { Footer } from 'flowbite-react';
 
-function HeaderPage() {
+function HeaderPage(props) {
   return /* @__PURE__ */ jsx("header", {
     id: "header",
-    children: /* @__PURE__ */ jsxs("div", {
-      className: "flex justify-center",
-      children: [/* @__PURE__ */ jsx("a", {
-        href: "/",
-        className: "basis-1/6 shadow-xl text-center rounded-sm",
-        children: "home"
-      }), /* @__PURE__ */ jsx("a", {
-        href: "/about",
-        className: "basis-1/6 shadow-xl  text-center rounded-sm",
-        children: "about"
-      }), /* @__PURE__ */ jsx("a", {
-        href: "/contact",
-        className: "basis-1/6 shadow-xl  text-center rounded-sm",
-        children: "contact"
-      })]
+    children: /* @__PURE__ */ jsx("div", {
+      children: /* @__PURE__ */ jsxs(Navbar, {
+        fluid: true,
+        rounded: true,
+        style: {
+          margin: "10px"
+        },
+        children: [/* @__PURE__ */ jsxs(Navbar.Brand, {
+          href: "/",
+          children: [/* @__PURE__ */ jsx("img", {
+            alt: "Flowbite React Logo",
+            className: "mr-3 h-6 sm:h-9",
+            src: "/dc.svg"
+          }), /* @__PURE__ */ jsx("span", {
+            className: "self-center whitespace-nowrap text-xl font-semibold dark:text-white",
+            children: "Darren Christoper"
+          })]
+        }), /* @__PURE__ */ jsxs(Navbar.Collapse, {
+          children: [/* @__PURE__ */ jsx(Navbar.Link, {
+            href: "/",
+            children: /* @__PURE__ */ jsx("p", {
+              children: "Home"
+            })
+          }), /* @__PURE__ */ jsx(Navbar.Link, {
+            href: "/about",
+            className: props.active === "about" ? "active:text-blue-500" : "",
+            children: "About"
+          }), /* @__PURE__ */ jsx(Navbar.Link, {
+            href: "/contact",
+            className: props.active === "contact" ? "active:text-blue-500" : "",
+            children: "Contact"
+          })]
+        })]
+      })
     })
   });
 }
@@ -90,10 +110,10 @@ const $$file = "C:/Users/Darren_Christoper/darrenchristoper.github.io/src/pages/
 const $$url = "/about";
 
 const about = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-    __proto__: null,
-    default: $$About,
-    file: $$file,
-    url: $$url
+  __proto__: null,
+  default: $$About,
+  file: $$file,
+  url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
 export { FooterPage as F, HeaderPage as H, about as a };
