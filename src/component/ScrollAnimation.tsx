@@ -16,7 +16,7 @@ type Options = {
 
 const useElementOnScreen = (options: Options): [React.RefObject<HTMLDivElement>, boolean] => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const [isVisible, setIsVisible] = useState<boolean>(false);
+    const [isVisible, setIsVisible] = useState<boolean>(true);
 
     const makeAppear = (entries: any) => {
         const [entry] = entries;
