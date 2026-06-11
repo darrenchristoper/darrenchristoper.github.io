@@ -13,7 +13,7 @@ export default function CardPage() {
                     <img className="w-24 h-24 mb-3 rounded-full shadow-lg"
                          src="https://flowbite.com/docs/images/carousel/carousel-1.svg" alt="Bonnie image"/>
                     <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Darren Christoper</h5>
-                    <span className="text-sm text-gray-500 dark:text-gray-400">Programmer</span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400">Full Stack Software Engineer</span>
                     <div className="flex mt-4 space-x-3 md:mt-6">
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default function CardPage() {
                 </h5>
                 <p className="font-normal text-gray-700 dark:text-gray-400">
                     <p>
-                        I am currently a master of Computer Science student in Illinois Institute of Technology
+                        Full Stack Software Engineer with a Master's in Computer Science from Illinois Institute of Technology. Experienced in Angular, Laravel, Python, and Cloud Infrastructure (AWS/GCP). Currently working on Robotics & Embedded Systems at Afila Labs, Chicago.
                     </p>
                 </p>
             </Card>

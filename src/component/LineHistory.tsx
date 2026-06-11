@@ -91,6 +91,15 @@ export default function DefaultTimeline() {
             <AnimateOnScroll reappear>
                 <TimeComponentref time={'Aug 2023'} title={'Illinois Institute of Technology'} body={'Admitted on the University as Master in Computer Science'} href={'https://www.iit.edu/'}/>
             </AnimateOnScroll>
+            <AnimateOnScroll reappear>
+                <TimeComponentref time={'Oct 2023 - Aug 2025'} title={'IIT — Research Assistant, AI'} body={'Built scalable web applications with PHP, Laravel, Angular Material, and GCP. Processed large datasets using Python (BERT/CNN models). Implemented serverless backends with AWS Lambda and CI/CD pipelines.'} href={'https://www.iit.edu/'}/>
+            </AnimateOnScroll>
+            <AnimateOnScroll reappear>
+                <TimeComponent time={'Aug 2025'} title={'Illinois Institute of Technology — Graduated'} body={'Completed M.A.S. in Computer Science'}/>
+            </AnimateOnScroll>
+            <AnimateOnScroll reappear>
+                <TimeComponentref time={'Jan 2026 - Present'} title={'Afila Labs — Robotics & Embedded Systems'} body={'Configuring LiDAR sensors on Jetson Nano Orin platform. Developing a robotic solution for sewer pipeline inspection applied to real-world infrastructure challenges.'} href={'https://www.linkedin.com/'}/>
+            </AnimateOnScroll>
         </Timeline>
         </Card>
         </div>
