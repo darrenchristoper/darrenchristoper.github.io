@@ -8,7 +8,7 @@ export default function Contact() {
     return (
         <>
             <br />
-            <div className=" justify-center align-middle"  style={{marginLeft:"20%" , marginRight:"20%", alignSelf:"center"}}>
+            <div className="flex justify-center">
                 <Card>
                     <h5 className="mb-3 text-base font-semibold text-gray-900 dark:text-white lg:text-xl">
                         Connect to Social media
