@@ -11,12 +11,21 @@ export default function Contact() {
             <div className="flex justify-center">
                 <Card>
                     <h5 className="mb-3 text-base font-semibold text-gray-900 dark:text-white lg:text-xl">
-                        Connect to Social media
+                        Get in Touch
                     </h5>
-                    <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
-
+                    <p className="text-sm font-normal text-gray-500 dark:text-gray-400 mb-2">
+                        darrenchristoper2500@gmail.com · Chicago, IL
                     </p>
                     <ul className="my-4 space-y-2">
+                        <li>
+                            <a
+                                className="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
+                                href="mailto:darrenchristoper2500@gmail.com"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                                <span className="ml-3 flex-1 whitespace-nowrap">Email</span>
+                            </a>
+                        </li>
                         <li>
 
                             <a

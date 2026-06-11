@@ -73,7 +73,7 @@ export default function DefaultTimeline() {
         <Card >
         <Timeline>
             <AnimateOnScroll reappear>
-              <TimeComponentref  time={'Sept 2017'} title={'Xi an Jiao Tong Liverpool University'} body={'Admitted in the University'} href={'https://www.xjtlu.edu.cn/en'} />
+              <TimeComponentref time={'Sept 2017'} title={'Xi\'an Jiaotong-Liverpool University & University of Liverpool'} body={'Admitted — B.S. in Information Management & Information Systems (dual degree)'} href={'https://www.xjtlu.edu.cn/en'} />
 
             </AnimateOnScroll>
             <AnimateOnScroll reappear>
@@ -83,10 +83,10 @@ export default function DefaultTimeline() {
              <TimeComponentref time={'Nov 2020'} title={'Future Investor 2020'} body={'Attend a webinar focusing on Investment and mutual fund'} href={'https://ppitiongkok.org/tag/future-investors/'}/>
             </AnimateOnScroll>
             <AnimateOnScroll reappear>
-                <TimeComponent time={'July 2022'} title={'Xi an Jiao Tong Liverpool University'} body={'Graduated as Bsc in Information Management Information System'}/>
+                <TimeComponent time={'July 2022'} title={'Xi\'an Jiaotong-Liverpool University / University of Liverpool — Graduated'} body={'B.S. in Information Management & Information Systems (dual degree)'}/>
             </AnimateOnScroll>
             <AnimateOnScroll reappear>
-                <TimeComponentref time={'July 2022- 2023'} title={'PT Hoki Distribution Niaga'} body={'Working as Programmer in Website and Mobile application'} href={'https://www.linkedin.com/company/pt-hoki-distribusi-niaga/'}/>
+                <TimeComponentref time={'Jul 2022 – Jul 2023'} title={'PT Hoki Distribution Niaga — Software Engineer'} body={'Developed dynamic web pages with JavaScript & PHP, migrated legacy features to a hybrid mobile app using Ionic Angular, and engineered scalable backend solutions for high-traffic distribution systems.'} href={'https://www.linkedin.com/company/pt-hoki-distribusi-niaga/'}/>
             </AnimateOnScroll>
             <AnimateOnScroll reappear>
                 <TimeComponentref time={'Aug 2023'} title={'Illinois Institute of Technology'} body={'Admitted on the University as Master in Computer Science'} href={'https://www.iit.edu/'}/>

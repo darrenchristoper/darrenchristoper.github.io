@@ -1,41 +1,33 @@
 import React from "react";
-import { Card } from 'flowbite-react';
+
+const skillGroups: { category: string; items: string[] }[] = [
+    { category: "Frameworks", items: ["Laravel", "Angular", "Ionic", "Flask", "Next.js", "Spring Boot", "React"] },
+    { category: "Languages", items: ["PHP", "TypeScript", "JavaScript", "Java", "Python", "C#", "Ruby"] },
+    { category: "Cloud & DevOps", items: ["GCP", "AWS Lambda", "Docker", "GitHub Actions", "CI/CD", "Linux/UNIX"] },
+    { category: "Databases", items: ["MySQL", "PostgreSQL", "NoSQL"] },
+    { category: "Testing", items: ["Selenium", "JUnit", "PHPUnit", "JMeter"] },
+    { category: "AI & ML", items: ["BERT", "CNN", "Vision Transformer", "MobileNet", "LLM"] },
+];
 
 export default function CardPage() {
     return (
-
-        <div className="flex justify-center">
-            <Card
-                className="mx-8 max-w-sm"
-                href="#"
-            >
-                <div className="flex flex-col items-center pb-10">
-                    <img className="w-24 h-24 mb-3 rounded-full shadow-lg"
-                         src="https://flowbite.com/docs/images/carousel/carousel-1.svg" alt="Bonnie image"/>
-                    <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Darren Christoper</h5>
-                    <span className="text-sm text-gray-500 dark:text-gray-400">Full Stack Software Engineer</span>
-                    <div className="flex mt-4 space-x-3 md:mt-6">
+        <section className="py-14 px-4 mx-auto max-w-screen-xl">
+            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-2">Skills & Technologies</h2>
+            <p className="text-center text-gray-500 dark:text-gray-400 mb-10">Technologies I've worked with across full-stack, cloud, and AI projects</p>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {skillGroups.map(({ category, items }) => (
+                    <div key={category} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <h3 className="mb-4 text-base font-semibold text-gray-900 dark:text-white uppercase tracking-wide">{category}</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {items.map(skill => (
+                                <span key={skill} className="px-3 py-1 text-sm font-medium text-blue-700 bg-blue-50 rounded-full dark:text-blue-300 dark:bg-blue-900/40">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </Card>
-
-
-            <Card
-                className="mx-8  max-w-sm bg-gray-300"
-                href="#"
-
-            >
-                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    <p>
-                      Hello & Welcome !
-                    </p>
-                </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-400">
-                    <p>
-                        Full Stack Software Engineer with a Master's in Computer Science from Illinois Institute of Technology. Experienced in Angular, Laravel, Python, and Cloud Infrastructure (AWS/GCP). Currently working on Robotics & Embedded Systems at Afila Labs, Chicago.
-                    </p>
-                </p>
-            </Card>
+                ))}
             </div>
-)
+        </section>
+    );
 }

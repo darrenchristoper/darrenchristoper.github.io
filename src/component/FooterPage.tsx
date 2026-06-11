@@ -8,7 +8,7 @@ export default function FooterPage() {
                 <Footer.Copyright
                     by="Darren Christoper™"
                     href="#"
-                    year={2023}
+                    year={2026}
                 />
                 <Footer.LinkGroup>
                     <Footer.Link href="/">
