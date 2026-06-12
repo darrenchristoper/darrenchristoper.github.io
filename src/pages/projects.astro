@@ -1,0 +1,97 @@
+---
+import HeaderPage from "../component/header";
+import FooterPage from "../component/FooterPage";
+
+const projects = [
+    {
+        title: "Sewer Pipeline Inspection Robot",
+        company: "Afila Labs",
+        period: "Jan 2026 – Present",
+        description: "Developing an autonomous robotic solution for sewer infrastructure inspection. Integrates LiDAR sensors with an NVIDIA Jetson Nano Orin platform to map pipeline interiors and detect structural anomalies in real-time.",
+        tags: ["Python", "ROS 2", "LiDAR", "Jetson Nano Orin", "Embedded Systems", "Computer Vision"],
+        badgeClass: "bg-blue-50 text-blue-700",
+        dotClass: "bg-blue-500",
+        badgeLabel: "Afila Labs",
+    },
+    {
+        title: "AI/ML Research Platform",
+        company: "Illinois Institute of Technology",
+        period: "Oct 2023 – Aug 2025",
+        description: "Built scalable web applications and cloud-native deployments on GCP. Developed AI/ML pipelines processing large datasets using BERT, CNN, Vision Transformer, and MobileNet models. Implemented serverless backends with AWS Lambda and automated CI/CD pipelines.",
+        tags: ["Python", "BERT", "CNN", "Vision Transformer", "GCP", "AWS Lambda", "Angular", "Laravel", "CI/CD"],
+        badgeClass: "bg-purple-50 text-purple-700",
+        dotClass: "bg-purple-500",
+        badgeLabel: "IIT",
+    },
+    {
+        title: "Hoki Distribution Platform",
+        company: "PT Hoki Distribution Niaga",
+        period: "Jul 2022 – Jul 2023",
+        description: "Developed a full-stack distribution management platform for a high-traffic FMCG business. Built a cross-platform mobile app with Ionic, engineered scalable backend features with Laravel and PHP, and integrated legacy systems for real-time inventory and order management.",
+        tags: ["Angular", "Laravel", "PHP", "Ionic", "TypeScript", "MySQL", "REST API"],
+        badgeClass: "bg-green-50 text-green-700",
+        dotClass: "bg-green-500",
+        badgeLabel: "PT Hoki",
+    },
+];
+---
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/dc.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Projects — Darren Christoper</title>
+    <meta name="description" content="Projects by Darren Christoper — full-stack web platforms, AI/ML research pipelines, and robotics embedded systems." />
+    <meta property="og:title" content="Projects — Darren Christoper" />
+    <meta property="og:description" content="Full-stack web platforms, AI/ML research pipelines, and robotics embedded systems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://darrenchristoper.github.io/projects" />
+</head>
+
+<body>
+<HeaderPage client:load active="projects" />
+
+<div class="animate-fade animate-once animate-duration-[1000ms] animate-ease-out animate-fill-forwards">
+<section class="py-16 px-4 mx-auto max-w-screen-xl">
+    <div class="max-w-3xl mb-12">
+        <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 mb-3">Featured Projects</h2>
+        <p class="text-lg text-gray-500">A selection of work from my professional experience and research.</p>
+    </div>
+
+    <div class="flex flex-col gap-8 max-w-4xl">
+        {projects.map((p) => (
+            <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-start justify-between flex-wrap gap-3 mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900">{p.title}</h3>
+                        <p class="text-sm font-medium text-gray-500 mt-0.5">{p.company} · {p.period}</p>
+                    </div>
+                    <span class={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${p.badgeClass}`}>
+                        <span class={`w-1.5 h-1.5 rounded-full ${p.dotClass}`}></span>
+                        {p.badgeLabel}
+                    </span>
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-5">{p.description}</p>
+                <div class="flex flex-wrap gap-2">
+                    {p.tags.map((tag) => (
+                        <span class="px-3 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full">{tag}</span>
+                    ))}
+                </div>
+            </div>
+        ))}
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-4">
+        <a href="/history" class="inline-flex items-center py-2.5 px-5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">
+            View Full Journey
+        </a>
+        <a href="/contact" class="inline-flex items-center py-2.5 px-5 text-sm font-semibold text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
+            Get in Touch
+        </a>
+    </div>
+</section>
+</div>
+
+<FooterPage client:load />
+</body>

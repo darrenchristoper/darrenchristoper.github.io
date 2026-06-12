@@ -2,7 +2,7 @@ import { Navbar } from "flowbite-react";
 import React from "react";
 
 interface HeaderProps {
-    active?: "home" | "about" | "contact" | "history";
+    active?: "home" | "about" | "contact" | "history" | "projects";
 }
 
 export default function HeaderPage(props: HeaderProps) {
@@ -26,6 +26,12 @@ export default function HeaderPage(props: HeaderProps) {
                     </Navbar.Link>
                     <Navbar.Link href="/about" active={props.active === "about"}>
                         About
+                    </Navbar.Link>
+                    <Navbar.Link href="/projects" active={props.active === "projects"}>
+                        Projects
+                    </Navbar.Link>
+                    <Navbar.Link href="/history" active={props.active === "history"}>
+                        History
                     </Navbar.Link>
                     <Navbar.Link href="/contact" active={props.active === "contact"}>
                         Contact

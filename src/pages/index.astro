@@ -11,16 +11,20 @@ import Jumbotron from "../astropage/jumbotron.astro";
 		<link rel="icon" type="image/svg+xml" href="/dc.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Darren Christoper</title>
+		<title>Darren Christoper — Full Stack Software Engineer</title>
+		<meta name="description" content="Darren Christoper — Full Stack Software Engineer based in Chicago, IL. M.A.S. Computer Science (IIT). Specializing in Angular, Laravel, Python, AWS, GCP, and Robotics." />
+		<meta property="og:title" content="Darren Christoper — Full Stack Software Engineer" />
+		<meta property="og:description" content="Full Stack Software Engineer based in Chicago, IL. M.A.S. Computer Science (IIT). Angular, Laravel, Python, AWS, GCP, Robotics." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://darrenchristoper.github.io/" />
 	</head>
-	<body >
-	 <HeaderPage client:load />
+	<body>
+	 <HeaderPage client:load active="home" />
 	 <div>&nbsp;</div>
    <Jumbotron/>
 	 <div>&nbsp;</div>
-			 <CardPage client:load/>
+		 <CardPage client:load/>
 	 <div>&nbsp;</div>
     <FooterPage client:load/>
 
 	</body>
-
