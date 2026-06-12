@@ -3,7 +3,6 @@ import LineHistory from "../component/LineHistory";
 import HeaderPage from "../component/header";
 import FooterPage from "../component/FooterPage";
 import Jumbotron from "../astropage/jumbotronhistory.astro";
-
 ---
 <head>
     <meta charset="utf-8" />
@@ -18,10 +17,9 @@ import Jumbotron from "../astropage/jumbotronhistory.astro";
     <meta property="og:url" content="https://darrenchristoper.github.io/history" />
 </head>
 
-<body>
+<body style="margin: 0; padding: 0; background: #000;">
 <HeaderPage client:load active="history" />
-<Jumbotron/>
-<LineHistory client:load/>
-<FooterPage client:load/>
+<Jumbotron />
+<LineHistory client:load />
+<FooterPage client:load />
 </body>
-

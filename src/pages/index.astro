@@ -2,29 +2,23 @@
 import HeaderPage from "../component/header.tsx";
 import CardPage from "../component/CardPage";
 import FooterPage from "../component/FooterPage";
-import CarouselPage from "../component/CarouselPage";
-import Carousel from "../component/Carousel.tsx";
 import Jumbotron from "../astropage/jumbotron.astro";
 ---
 <head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/dc.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Darren Christoper — Full Stack Software Engineer</title>
-		<meta name="description" content="Darren Christoper — Full Stack Software Engineer based in Chicago, IL. M.A.S. Computer Science (IIT). Specializing in Angular, Laravel, Python, AWS, GCP, and Robotics." />
-		<meta property="og:title" content="Darren Christoper — Full Stack Software Engineer" />
-		<meta property="og:description" content="Full Stack Software Engineer based in Chicago, IL. M.A.S. Computer Science (IIT). Angular, Laravel, Python, AWS, GCP, Robotics." />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://darrenchristoper.github.io/" />
-	</head>
-	<body>
-	 <HeaderPage client:load active="home" />
-	 <div>&nbsp;</div>
-   <Jumbotron/>
-	 <div>&nbsp;</div>
-		 <CardPage client:load/>
-	 <div>&nbsp;</div>
-    <FooterPage client:load/>
-
-	</body>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/dc.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Darren Christoper — Full Stack Software Engineer</title>
+    <meta name="description" content="Darren Christoper — Full Stack Software Engineer based in Chicago, IL. M.A.S. Computer Science (IIT). Specializing in Angular, Laravel, Python, AWS, GCP, and Robotics." />
+    <meta property="og:title" content="Darren Christoper — Full Stack Software Engineer" />
+    <meta property="og:description" content="Full Stack Software Engineer based in Chicago, IL. M.A.S. Computer Science (IIT). Angular, Laravel, Python, AWS, GCP, Robotics." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://darrenchristoper.github.io/" />
+</head>
+<body style="margin: 0; padding: 0; background: #000;">
+    <HeaderPage client:load active="home" />
+    <Jumbotron />
+    <CardPage client:load />
+    <FooterPage client:load />
+</body>

@@ -1,7 +1,7 @@
 ---
-
 import HeaderPage from "../component/header";
-import FooterPage from "../component/FooterPage";---
+import FooterPage from "../component/FooterPage";
+---
 <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/dc.svg" />
@@ -14,27 +14,47 @@ import FooterPage from "../component/FooterPage";---
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://darrenchristoper.github.io/about" />
 </head>
-<body >
+<body style="margin: 0; padding: 0; background: #fff;">
 <HeaderPage client:load active="about" />
+
 <div class="animate-fade animate-once animate-duration-[1000ms] animate-ease-out animate-fill-forwards">
-<section class="py-16 px-4 mx-auto max-w-screen-xl">
-    <div class="max-w-3xl mx-auto">
-        <h2 class="mb-6 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">About Me</h2>
-        <div class="space-y-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            <p>I’m <strong class="text-gray-900 dark:text-white">Darren Christoper</strong> — a Full Stack Software Engineer based in Chicago, IL with a Master’s in Computer Science from Illinois Institute of Technology. I have hands-on experience in Full Stack Development, System Scalability, and Cloud Infrastructure (AWS/GCP), working across Laravel, Angular, Ionic, Python, and more.</p>
-            <p>Most recently I served as a Research Assistant at IIT, building scalable web applications, cloud-native deployments on GCP, and AI/ML pipelines using BERT and CNN models. I’m currently working on a Robotics &amp; Embedded Systems project at Afila Labs — developing a robotic solution for sewer pipeline inspection using LiDAR sensors on a Jetson Nano Orin platform.</p>
-            <p>Outside of work, I enjoy reading about technology, finance &amp; business. Feel free to connect — I’d love to learn more about you.</p>
+<section style="background: #fff; padding: 100px 22px; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;">
+    <div style="max-width: 692px; margin: 0 auto;">
+        <h2 style="font-size: clamp(40px, 6vw, 64px); font-weight: 700; color: #1d1d1f; letter-spacing: -0.005em; line-height: 1.05; margin-bottom: 32px; margin-top: 0;">
+            About Me
+        </h2>
+        <div style="font-size: 19px; line-height: 1.7; color: #1d1d1f; letter-spacing: -0.01em;">
+            <p style="margin: 0 0 24px;">
+                I'm <strong>Darren Christoper</strong> — a Full Stack Software Engineer based in Chicago, IL with a Master's in Computer Science from Illinois Institute of Technology. I have hands-on experience in Full Stack Development, System Scalability, and Cloud Infrastructure (AWS/GCP), working across Laravel, Angular, Ionic, Python, and more.
+            </p>
+            <p style="margin: 0 0 24px; color: #6e6e73;">
+                Most recently I served as a Research Assistant at IIT, building scalable web applications, cloud-native deployments on GCP, and AI/ML pipelines using BERT and CNN models. I'm currently working on a Robotics &amp; Embedded Systems project at Afila Labs — developing a robotic solution for sewer pipeline inspection using LiDAR sensors on a Jetson Nano Orin platform.
+            </p>
+            <p style="margin: 0; color: #6e6e73;">
+                Outside of work, I enjoy reading about technology, finance &amp; business. Feel free to connect — I'd love to learn more about you.
+            </p>
         </div>
-        <div class="mt-10 flex flex-wrap gap-4">
-            <a href="/history" class="inline-flex items-center py-2.5 px-5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">
+        <div style="margin-top: 44px; display: flex; gap: 16px; flex-wrap: wrap;">
+            <a
+                href="/history"
+                style="display: inline-flex; align-items: center; padding: 12px 24px; font-size: 17px; font-weight: 400; color: #fff; background: #0071e3; border-radius: 980px; text-decoration: none; letter-spacing: -0.01em; transition: background 0.2s;"
+                onmouseover="this.style.background='#0077ed'"
+                onmouseout="this.style.background='#0071e3'"
+            >
                 View My Journey
             </a>
-            <a href="/contact" class="inline-flex items-center py-2.5 px-5 text-sm font-semibold text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors dark:text-white dark:bg-gray-700 dark:hover:bg-gray-600">
+            <a
+                href="/contact"
+                style="display: inline-flex; align-items: center; padding: 12px 24px; font-size: 17px; font-weight: 400; color: '#1d1d1f'; background: transparent; border: 1px solid rgba(0,0,0,0.22); border-radius: 980px; text-decoration: none; letter-spacing: -0.01em; transition: background 0.2s; color: #1d1d1f;"
+                onmouseover="this.style.background='rgba(0,0,0,0.06)'"
+                onmouseout="this.style.background='transparent'"
+            >
                 Get in Touch
             </a>
         </div>
     </div>
 </section>
 </div>
-<FooterPage client:load/>
+
+<FooterPage client:load />
 </body>

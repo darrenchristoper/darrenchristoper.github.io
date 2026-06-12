@@ -1,9 +1,46 @@
 ---
-
 ---
-<section class="bg-white dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Let's Connect</h1>
-        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Feel free to reach out via LinkedIn or GitHub. I'm always open to discussing new opportunities, collaborations, or just a good conversation about tech.</p>
+<section id="contact-section" style="background: #000; padding: 120px 22px 80px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif; overflow: hidden; position: relative;">
+    <div id="contact-glow" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; height: 300px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0,113,227,0.12) 0%, transparent 70%); pointer-events: none; will-change: transform;"></div>
+    <div id="contact-content" style="position: relative; z-index: 1; will-change: transform, opacity;">
+        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #86868b; margin-bottom: 16px; margin-top: 0;">Chicago, IL</p>
+        <h1 style="font-size: clamp(40px, 7vw, 80px); font-weight: 700; letter-spacing: -0.005em; line-height: 1.05; color: #f5f5f7; margin-bottom: 20px; margin-top: 0;">
+            Let's Connect
+        </h1>
+        <p style="font-size: 19px; line-height: 1.7; color: #86868b; max-width: 480px; margin: 0 auto; letter-spacing: -0.01em;">
+            Open to new opportunities, collaborations, or just a good conversation about tech.
+        </p>
     </div>
 </section>
+
+<script>
+(function () {
+    const content = document.getElementById('contact-content');
+    const glow = document.getElementById('contact-glow');
+    const section = document.getElementById('contact-section');
+    if (!content || !section) return;
+
+    let raf = 0;
+
+    function update() {
+        const scrollY = window.scrollY;
+        const top = section.offsetTop;
+        const h = section.offsetHeight;
+        const local = scrollY - top;
+        const progress = Math.min(Math.max(local / h, 0), 1);
+
+        content.style.transform = `translateY(${Math.max(local, 0) * 0.3}px)`;
+        content.style.opacity = String(Math.max(0, 1 - progress * 1.8));
+
+        if (glow) glow.style.transform = `translate(-50%, calc(-50% + ${Math.max(local, 0) * 0.12}px))`;
+
+        raf = 0;
+    }
+
+    window.addEventListener('scroll', function () {
+        if (!raf) raf = requestAnimationFrame(update);
+    }, { passive: true });
+
+    update();
+})();
+</script>

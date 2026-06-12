@@ -9,9 +9,8 @@ const projects = [
         period: "Jan 2026 – Present",
         description: "Developing an autonomous robotic solution for sewer infrastructure inspection. Integrates LiDAR sensors with an NVIDIA Jetson Nano Orin platform to map pipeline interiors and detect structural anomalies in real-time.",
         tags: ["Python", "ROS 2", "LiDAR", "Jetson Nano Orin", "Embedded Systems", "Computer Vision"],
-        badgeClass: "bg-blue-50 text-blue-700",
-        dotClass: "bg-blue-500",
-        badgeLabel: "Afila Labs",
+        accentColor: "#0071e3",
+        label: "Afila Labs",
     },
     {
         title: "AI/ML Research Platform",
@@ -19,9 +18,8 @@ const projects = [
         period: "Oct 2023 – Aug 2025",
         description: "Built scalable web applications and cloud-native deployments on GCP. Developed AI/ML pipelines processing large datasets using BERT, CNN, Vision Transformer, and MobileNet models. Implemented serverless backends with AWS Lambda and automated CI/CD pipelines.",
         tags: ["Python", "BERT", "CNN", "Vision Transformer", "GCP", "AWS Lambda", "Angular", "Laravel", "CI/CD"],
-        badgeClass: "bg-purple-50 text-purple-700",
-        dotClass: "bg-purple-500",
-        badgeLabel: "IIT",
+        accentColor: "#bf5af2",
+        label: "IIT",
     },
     {
         title: "Hoki Distribution Platform",
@@ -29,9 +27,8 @@ const projects = [
         period: "Jul 2022 – Jul 2023",
         description: "Developed a full-stack distribution management platform for a high-traffic FMCG business. Built a cross-platform mobile app with Ionic, engineered scalable backend features with Laravel and PHP, and integrated legacy systems for real-time inventory and order management.",
         tags: ["Angular", "Laravel", "PHP", "Ionic", "TypeScript", "MySQL", "REST API"],
-        badgeClass: "bg-green-50 text-green-700",
-        dotClass: "bg-green-500",
-        badgeLabel: "PT Hoki",
+        accentColor: "#34c759",
+        label: "PT Hoki",
     },
 ];
 ---
@@ -49,49 +46,87 @@ const projects = [
     <meta property="og:url" content="https://darrenchristoper.github.io/projects" />
 </head>
 
-<body>
+<body style="margin: 0; padding: 0; background: #fff;">
 <HeaderPage client:load active="projects" />
 
 <div class="animate-fade animate-once animate-duration-[1000ms] animate-ease-out animate-fill-forwards">
-<section class="py-16 px-4 mx-auto max-w-screen-xl">
-    <div class="max-w-3xl mb-12">
-        <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 mb-3">Featured Projects</h2>
-        <p class="text-lg text-gray-500">A selection of work from my professional experience and research.</p>
-    </div>
+<section style="background: #fff; padding: 100px 22px; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;">
+    <div style="max-width: 980px; margin: 0 auto;">
+        <h2 style="font-size: clamp(40px, 6vw, 64px); font-weight: 700; color: #1d1d1f; letter-spacing: -0.005em; line-height: 1.05; margin-bottom: 12px; margin-top: 0;">
+            Featured Projects
+        </h2>
+        <p style="font-size: 19px; color: #6e6e73; margin-bottom: 64px; margin-top: 0; letter-spacing: -0.01em;">
+            A selection of work from my professional experience and research.
+        </p>
 
-    <div class="flex flex-col gap-8 max-w-4xl">
-        {projects.map((p) => (
-            <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div class="flex items-start justify-between flex-wrap gap-3 mb-4">
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900">{p.title}</h3>
-                        <p class="text-sm font-medium text-gray-500 mt-0.5">{p.company} · {p.period}</p>
+        <div id="project-cards" style="display: flex; flex-direction: column; gap: 20px; max-width: 780px;">
+            {projects.map((p, idx) => (
+                <div data-parallax-card={idx} style="background: #fff; border: 1px solid rgba(0,0,0,0.1); border-radius: 20px; padding: 40px 36px; will-change: transform; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
+                    <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+                        <div>
+                            <h3 style="font-size: 21px; font-weight: 600; color: #1d1d1f; letter-spacing: -0.022em; margin: 0 0 4px;">{p.title}</h3>
+                            <p style="font-size: 13px; color: #6e6e73; margin: 0; letter-spacing: -0.01em;">{p.company} · {p.period}</p>
+                        </div>
+                        <span style={`display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; font-size: 12px; font-weight: 600; border-radius: 980px; background: ${p.accentColor}18; color: ${p.accentColor};`}>
+                            <span style={`width: 6px; height: 6px; border-radius: 50%; background: ${p.accentColor}; flex-shrink: 0;`}></span>
+                            {p.label}
+                        </span>
                     </div>
-                    <span class={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${p.badgeClass}`}>
-                        <span class={`w-1.5 h-1.5 rounded-full ${p.dotClass}`}></span>
-                        {p.badgeLabel}
-                    </span>
+                    <p style="font-size: 17px; line-height: 1.7; color: #6e6e73; margin: 0 0 24px; letter-spacing: -0.01em;">{p.description}</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        {p.tags.map((tag) => (
+                            <span style="padding: 5px 12px; font-size: 12px; font-weight: 500; color: '#6e6e73'; background: '#f5f5f7'; border-radius: 980px; color: #6e6e73; background: #f5f5f7;">{tag}</span>
+                        ))}
+                    </div>
                 </div>
-                <p class="text-gray-700 leading-relaxed mb-5">{p.description}</p>
-                <div class="flex flex-wrap gap-2">
-                    {p.tags.map((tag) => (
-                        <span class="px-3 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full">{tag}</span>
-                    ))}
-                </div>
-            </div>
-        ))}
-    </div>
+            ))}
+        </div>
 
-    <div class="mt-12 flex flex-wrap gap-4">
-        <a href="/history" class="inline-flex items-center py-2.5 px-5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">
-            View Full Journey
-        </a>
-        <a href="/contact" class="inline-flex items-center py-2.5 px-5 text-sm font-semibold text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
-            Get in Touch
-        </a>
+        <div style="margin-top: 52px; display: flex; gap: 16px; flex-wrap: wrap;">
+            <a
+                href="/history"
+                style="display: inline-flex; align-items: center; padding: 12px 24px; font-size: 17px; font-weight: 400; color: #fff; background: #0071e3; border-radius: 980px; text-decoration: none; letter-spacing: -0.01em; transition: background 0.2s;"
+                onmouseover="this.style.background='#0077ed'"
+                onmouseout="this.style.background='#0071e3'"
+            >
+                View Full Journey
+            </a>
+            <a
+                href="/contact"
+                style="display: inline-flex; align-items: center; padding: 12px 24px; font-size: 17px; font-weight: 400; color: #1d1d1f; background: transparent; border: 1px solid rgba(0,0,0,0.22); border-radius: 980px; text-decoration: none; letter-spacing: -0.01em; transition: background 0.2s;"
+                onmouseover="this.style.background='rgba(0,0,0,0.06)'"
+                onmouseout="this.style.background='transparent'"
+            >
+                Get in Touch
+            </a>
+        </div>
     </div>
 </section>
 </div>
 
 <FooterPage client:load />
 </body>
+
+<script>
+(function () {
+    const speeds = [0.05, 0.03, 0.07];
+    const cards = Array.from(document.querySelectorAll('[data-parallax-card]'));
+    let raf = 0;
+
+    function update() {
+        cards.forEach(function (card, i) {
+            const el = card as HTMLElement;
+            const rect = el.getBoundingClientRect();
+            const center = (rect.top + rect.height / 2) - window.innerHeight / 2;
+            el.style.transform = 'translateY(' + (center * (speeds[i] ?? 0.04) * -1) + 'px)';
+        });
+        raf = 0;
+    }
+
+    window.addEventListener('scroll', function () {
+        if (!raf) raf = requestAnimationFrame(update);
+    }, { passive: true });
+
+    update();
+})();
+</script>

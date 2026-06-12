@@ -18,11 +18,9 @@ import Jumbotron from "../astropage/jumbotroncontact.astro";
     <meta property="og:url" content="https://darrenchristoper.github.io/contact" />
 </head>
 
-<body>
+<body style="margin: 0; padding: 0; background: #000;">
 <HeaderPage client:load active="contact" />
-<Jumbotron/>
-<div class="animate-fade animate-once animate-duration-[1000ms] animate-ease-out animate-fill-forwards">
-<Contact/>
-</div>
-<FooterPage client:load/>
+<Jumbotron />
+<Contact />
+<FooterPage client:load />
 </body>

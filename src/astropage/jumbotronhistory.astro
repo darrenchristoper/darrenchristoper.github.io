@@ -1,21 +1,46 @@
 ---
-
 ---
-
-<section class="bg-white dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">My Journey</h1>
-        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Embark on a captivating journey through time with me. Explore a dynamic timeline that traces the evolution of milestones, experiences, and accomplishments that have shaped my path. From humble beginnings to significant achievements, join me as I share my unique story.</p>
-        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-            <!--<a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">-->
-            <!--    Get started-->
-            <!--    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">-->
-            <!--        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>-->
-            <!--    </svg>-->
-            <!--</a>-->
-            <!--<a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">-->
-            <!--    Learn more-->
-            <!--</a>-->
-        </div>
+<section id="hist-section" style="background: #000; padding: 120px 22px 80px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif; overflow: hidden; position: relative;">
+    <div id="hist-glow" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; height: 300px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0,113,227,0.12) 0%, transparent 70%); pointer-events: none; will-change: transform;"></div>
+    <div id="hist-content" style="position: relative; z-index: 1; will-change: transform, opacity;">
+        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #86868b; margin-bottom: 16px; margin-top: 0;">Professional Journey</p>
+        <h1 style="font-size: clamp(40px, 7vw, 80px); font-weight: 700; letter-spacing: -0.005em; line-height: 1.05; color: #f5f5f7; margin-bottom: 20px; margin-top: 0; max-width: 800px; margin-left: auto; margin-right: auto;">
+            My Journey
+        </h1>
+        <p style="font-size: 19px; line-height: 1.7; color: #86868b; max-width: 540px; margin: 0 auto; letter-spacing: -0.01em;">
+            A timeline tracing the milestones, experiences, and accomplishments that have shaped my path in software engineering and research.
+        </p>
     </div>
 </section>
+
+<script>
+(function () {
+    const content = document.getElementById('hist-content');
+    const glow = document.getElementById('hist-glow');
+    const section = document.getElementById('hist-section');
+    if (!content || !section) return;
+
+    let raf = 0;
+
+    function update() {
+        const scrollY = window.scrollY;
+        const top = section.offsetTop;
+        const h = section.offsetHeight;
+        const local = scrollY - top;
+        const progress = Math.min(Math.max(local / h, 0), 1);
+
+        content.style.transform = `translateY(${Math.max(local, 0) * 0.3}px)`;
+        content.style.opacity = String(Math.max(0, 1 - progress * 1.8));
+
+        if (glow) glow.style.transform = `translate(-50%, calc(-50% + ${Math.max(local, 0) * 0.12}px))`;
+
+        raf = 0;
+    }
+
+    window.addEventListener('scroll', function () {
+        if (!raf) raf = requestAnimationFrame(update);
+    }, { passive: true });
+
+    update();
+})();
+</script>
